@@ -1,0 +1,9 @@
+{
+  "name": "dancy",
+  "version": "1.0.0",
+  "description": "Dance-tutorial platform.",
+  "main": "index.js",
+  "repository": "git@github.com:VladFiliucov/dancy.git",
+  "author": "VladFiliucov",
+  "license": "MIT"
+}
