@@ -15,23 +15,26 @@
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
     "object-assign": "4.1.1",
+    "path": "^0.12.7",
     "postcss-flexbugs-fixes": "3.2.0",
     "postcss-loader": "2.0.6",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^3.2.12",
     "@storybook/addon-chapters": "^0.6.2",
     "@storybook/addon-info": "3.2.5",
     "@storybook/addon-knobs": "3.2.5",
+    "@storybook/addon-links": "^3.2.12",
     "@storybook/react": "^3.2.12",
     "autoprefixer": "7.1.2",
     "babel-core": "6.25.0",
     "babel-eslint": "7.2.3",
     "babel-jest": "20.0.3",
     "babel-loader": "^7.1.2",
-    "babel-preset-react-app": "^3.0.3",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-preset-react-app": "^3.0.3",
     "babel-runtime": "6.26.0",
     "case-sensitive-paths-webpack-plugin": "2.1.1",
     "chalk": "1.1.3",
@@ -52,8 +55,6 @@
     "react-test-renderer": "^16.0.0",
     "webpack": "3.5.1",
     "webpack-dev-server": "2.8.2",
-    "webpack-manifest-plugin": "1.2.1",
-    "@storybook/addon-actions": "^3.2.12",
-    "@storybook/addon-links": "^3.2.12"
+    "webpack-manifest-plugin": "1.2.1"
   }
 }
