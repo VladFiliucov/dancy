@@ -55,9 +55,10 @@ export default {
   },
 
   resolve: {
+    extensions: [".js", ".jsx"],
     modules: [
       'node_modules',
-      path.resolve(__dirname, root)
+      path.resolve(root)
     ]
   }
 }
