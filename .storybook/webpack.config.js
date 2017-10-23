@@ -6,6 +6,8 @@ module.exports = (baseConfig, env) => {
 
   // Extend it as you need.
 
+  config.resolve.modules.push(path.resolve(process.cwd(), 'src'));
+
   config.module.rules.push({
     test: /\.scss$/,
     loaders: ["style-loader", "css-loader", "sass-loader"],

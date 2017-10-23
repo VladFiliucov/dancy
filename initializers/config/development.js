@@ -1,7 +1,6 @@
 const NODE_ENV = process.env.NODE_ENV || 'development'
 
 import path, { resolve } from 'path';
-import webpack from 'webpack';
 
 const root = path.join(process.cwd(), 'src');
 
@@ -16,7 +15,7 @@ export default {
   },
 
   devServer: {
-    contentBase: path.join(root, "assets"),
+    contentBase: path.join(root, 'assets'),
     publicPath: '/assets/',
     port: 9090
   },
@@ -55,10 +54,11 @@ export default {
   },
 
   resolve: {
-    extensions: [".js", ".jsx"],
+    extensions: ['.js', '.jsx'],
     modules: [
       'node_modules',
-      path.resolve(root)
+      resolve(root)
     ]
   }
-}
+};
+
