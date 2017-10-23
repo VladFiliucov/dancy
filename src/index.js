@@ -8,4 +8,5 @@ const rootEl = document.getElementById('app');
 ReactDOM.render(
   <App />,
   rootEl
-)
+);
+
