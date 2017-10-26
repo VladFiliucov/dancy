@@ -16,4 +16,3 @@ module.exports = (baseConfig, env) => {
 
   return config;
 };
-
