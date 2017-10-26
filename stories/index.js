@@ -4,9 +4,13 @@ import { storiesOf, addDecorator } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
+import { withInfo } from '@storybook/addon-info';
 
 import { Button, Welcome } from '@storybook/react/demo';
 import App from 'startup/App';
+import Navbar from 'components/ui/shared/Navbar';
+
+import { NavbarStory } from './components/ui/shared/Navbar';
 
 addDecorator(withKnobs);
 
@@ -37,3 +41,13 @@ storiesOf('App', module)
       <App />
     )
   );
+
+storiesOf('Navbar', module)
+  .add('Navbar', NavbarStory)
+  .addWithInfo(
+    'with title',
+    'Has title passed in', () => (
+      <Navbar title={text('title', 'Dancy')} />
+    )
+  );
+
