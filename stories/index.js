@@ -5,6 +5,13 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
+import { specs, describe, it } from 'storybook-addon-specifications'
+
+import { mount, configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+
+
+import expect from "expect";
 
 import { Button, Welcome } from '@storybook/react/demo';
 import App from 'startup/App';
@@ -12,6 +19,7 @@ import Navbar from 'components/ui/shared/Navbar';
 
 import { NavbarStory } from './components/ui/shared/Navbar';
 
+configure({ adapter: new Adapter() })
 addDecorator(withKnobs);
 
 storiesOf('Welcome', module)
@@ -33,6 +41,23 @@ storiesOf('Button', module)
   .add('with some emoji', () =>
     <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>
   );
+
+
+storiesOf('WeolcomeButton', module).add('Hello World', function () {
+  const story =
+    <button onClick={action('Hello World')}>
+      Hello World
+    </button>;
+
+  specs(() => describe('Hello World', function () {
+    it('Should have the Hello World label', function () {
+      let output = mount(story);
+      expect(output.text()).toContain('Hello World');
+    });
+  }));
+
+  return story;
+});
 
 storiesOf('App', module)
   .addWithInfo(
