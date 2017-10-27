@@ -1,29 +1,49 @@
 import React from 'react';
 
-import Enzyme from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-
-Enzyme.configure({ adapter: new Adapter() });
-
+import { storiesOf, addDecorator } from '@storybook/react';
+import { mount } from 'enzyme';
 import { specs, describe, it } from 'storybook-addon-specifications';
 import expect from 'expect';
-import ReactTestUtils from 'react-dom/test-utils';
+import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
+import { withInfo } from '@storybook/addon-info';
 
 import Navbar from 'components/ui/shared/Navbar';
 
-export const NavbarStory = () => {
-  const story = (
-    <Navbar title={'Dancy'} />
-  );
+addDecorator(withKnobs);
 
-  specs(() => describe('Navbar', () => {
-    it('Should have the title', () => {
-      const output = Enzyme.mount(story);
+const NavbarStories = storiesOf('Navbar', module);
 
-      expect(output.text()).toContain('Dancy');
-    });
-  }));
+NavbarStories.addWithInfo('with title',
+  'Tests that title contains our content', () => {
 
-  return story;
-};
+    const story = (
+      <Navbar title={text('title', 'Dancy')} />
+    );
 
+    specs(() => describe('Navbar', () => {
+      it('Should have the title', () => {
+        const output = mount(story);
+
+        expect(output.text()).toContain('Dancy');
+      });
+    }));
+
+    return story;
+  }
+);
+
+NavbarStories.addWithInfo(
+  'with short title',
+  'Has title passed in', () => (
+    <Navbar title={text('title', 'Dancy')} />
+  )
+);
+
+NavbarStories.addWithInfo(
+  'with long title',
+  'Has title passed in', () => (
+    <Navbar title={text('title', 'Internationalization Title')} />
+  )
+);
+
+export default NavbarStories;

@@ -10,14 +10,12 @@ import { specs, describe, it } from 'storybook-addon-specifications'
 import { mount, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-
 import expect from "expect";
 
 import { Button, Welcome } from '@storybook/react/demo';
 import App from 'startup/App';
-import Navbar from 'components/ui/shared/Navbar';
 
-import { NavbarStory } from './components/ui/shared/Navbar';
+import NavbarStories from './components/ui/shared/Navbar';
 
 configure({ adapter: new Adapter() })
 addDecorator(withKnobs);
@@ -51,7 +49,7 @@ storiesOf('WeolcomeButton', module).add('Hello World', function () {
 
   specs(() => describe('Hello World', function () {
     it('Should have the Hello World label', function () {
-      let output = mount(story);
+      const output = mount(story);
       expect(output.text()).toContain('Hello World');
     });
   }));
@@ -67,12 +65,4 @@ storiesOf('App', module)
     )
   );
 
-storiesOf('Navbar', module)
-  .add('Navbar', NavbarStory)
-  .addWithInfo(
-    'with title',
-    'Has title passed in', () => (
-      <Navbar title={text('title', 'Dancy')} />
-    )
-  );
 
