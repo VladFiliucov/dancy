@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import './Navbar.css';
+
 export default class Navbar extends Component {
   constructor(props) {
     super(props);
@@ -8,10 +10,11 @@ export default class Navbar extends Component {
   render() {
     return (
       <div>
-        <h1>
-          {this.props.title}
-        </h1>
+        <ul>
+          <li><a className="active" href="#home">{this.props.title}</a></li>
+        </ul>
       </div>
     );
   }
 }
+
