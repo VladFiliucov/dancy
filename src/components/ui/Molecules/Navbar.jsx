@@ -2,19 +2,12 @@ import React, { Component } from 'react';
 
 import './Navbar.css';
 
-export default class Navbar extends Component {
-  constructor(props) {
-    super(props);
-  }
+const Navbar = ({ title }) => (
+  <div>
+    <ul>
+      <li><a className="active" href="#home">{title}</a></li>
+    </ul>
+  </div>
+);
 
-  render() {
-    return (
-      <div>
-        <ul>
-          <li><a className="active" href="#home">{this.props.title}</a></li>
-        </ul>
-      </div>
-    );
-  }
-}
-
+export default Navbar;
