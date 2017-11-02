@@ -7,11 +7,11 @@ import expect from 'expect';
 import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 
-import Navbar from 'components/ui/shared/Navbar';
+import Navbar from 'components/ui/Molecules/Navbar';
 
 addDecorator(withKnobs);
 
-const NavbarStories = storiesOf('Navbar', module);
+const NavbarStories = storiesOf('Molecules/Navbar', module);
 
 NavbarStories.addWithInfo('with title',
   'Tests that title contains our content', () => {

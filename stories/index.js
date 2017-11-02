@@ -5,19 +5,19 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
-import { specs, describe, it } from 'storybook-addon-specifications'
+import { specs, describe, it } from 'storybook-addon-specifications';
 
 import { mount, configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
-import expect from "expect";
+import expect from 'expect';
 
 import { Button, Welcome } from '@storybook/react/demo';
 import App from 'startup/App';
 
 import NavbarStories from './components/ui/shared/Navbar';
 
-configure({ adapter: new Adapter() })
+configure({ adapter: new Adapter() });
 addDecorator(withKnobs);
 
 storiesOf('Welcome', module)
