@@ -16,6 +16,7 @@ import { Button, Welcome } from '@storybook/react/demo';
 import App from 'startup/App';
 
 import NavbarStories from './components/ui/shared/Navbar';
+import ButtonStories from './components/ui/Atoms/Button';
 
 configure({ adapter: new Adapter() });
 addDecorator(withKnobs);

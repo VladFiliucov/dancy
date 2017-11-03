@@ -15,7 +15,6 @@ const NavbarStories = storiesOf('Molecules/Navbar', module);
 
 NavbarStories.addWithInfo('with title',
   'Tests that title contains our content', () => {
-
     const story = (
       <Navbar title={text('title', 'Dancy')} />
     );
