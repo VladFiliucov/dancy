@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { storiesOf, addDecorator } from '@storybook/react';
-import { mount } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import { specs, describe, it } from 'storybook-addon-specifications';
 import expect from 'expect';
 import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
@@ -22,7 +22,7 @@ ButtonStories.addWithInfo('default',
 
     specs(() => describe('Button', () => {
       it('Should have Submit text', () => {
-        const output = mount(story);
+        const output = shallow(story);
 
         expect(output.text()).toContain('Submit');
       });
@@ -38,6 +38,14 @@ ButtonStories.addWithInfo('with other className',
     const story = (
       <Button text='Cmon!' className='warning' />
     );
+
+    specs(() => describe('Button', () => {
+      it('Should have `warning` className', () => {
+        const output = shallow(story);
+
+        expect(output.find('button.warning').exists()).toBe(true);
+      });
+    }));
 
     return story;
   }
