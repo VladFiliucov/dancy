@@ -32,4 +32,15 @@ ButtonStories.addWithInfo('default',
   }
 );
 
+ButtonStories.addWithInfo('with other className',
+  'Button applies classNames if they are provided in props',
+  () => {
+    const story = (
+      <Button text='Cmon!' className='warning' />
+    );
+
+    return story;
+  }
+);
+
 export default ButtonStories;

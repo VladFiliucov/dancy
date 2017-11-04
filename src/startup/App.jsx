@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Button } from 'components/ui/Atoms/Button';
 
 export default class App extends Component {
   constructor(props) {
@@ -7,7 +8,12 @@ export default class App extends Component {
 
   render() {
     return (
-      <h1>This is working now</h1>
+      <div>
+        <h1>This is working now</h1>
+        <div>
+          <Button />
+        </div>
+      </div>
     );
   }
 }

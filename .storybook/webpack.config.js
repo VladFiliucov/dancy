@@ -14,5 +14,13 @@ module.exports = (baseConfig, env) => {
     include: path.resolve(__dirname, '../')
   });
 
+  config.module.rules.push({
+    test: /\.(js|jsx)?$/,
+    use: {
+      loader: 'babel-loader'
+    },
+    exclude: /node_modules/
+  });
+
   return config;
 };
