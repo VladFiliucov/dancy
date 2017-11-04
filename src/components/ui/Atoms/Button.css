@@ -1,3 +1,11 @@
 .primary {
-  background-color: blue;
+  background: blue;
+  color: white;
+  border: 1px solid blue;
+}
+
+.warning {
+  background: red;
+  color: white;
+  border: 1px solid red;
 }

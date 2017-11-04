@@ -3,17 +3,15 @@ import PropTypes from 'prop-types';
 
 import './Button.css';
 
-export const Button = (props) => {
-  const {text, ...rest} = props;
-
-  return <button {...rest}>{text}</button>;
-};
+export const Button = ({text, ...rest}) => (
+  <button {...rest}>{text}</button>
+);
 
 Button.propTypes = {
   text: PropTypes.string,
   className: PropTypes.string,
   disabled: PropTypes.bool,
-  onSubmit: PropTypes.func.isRequired
+  onSubmit: PropTypes.func
 };
 
 Button.defaultProps = {
