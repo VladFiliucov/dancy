@@ -8,11 +8,13 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --config ./initializers/config/webpack.es5.js",
+    "test": "jest  --config jest.config.json",
     "start-dev": "node initializers/server/index.js",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "app-module-path": "^2.2.0",
     "babel-preset-es2015": "^6.24.1",
     "eslint-import-resolver-webpack": "^0.8.3",
     "eslint-plugin-destructuring": "^2.1.0",
@@ -55,6 +57,7 @@
     "expect": "^21.2.1",
     "extract-text-webpack-plugin": "3.0.0",
     "file-loader": "0.11.2",
+    "identity-obj-proxy": "^3.0.0",
     "jest": "^21.2.1",
     "react-dev-utils": "^4.1.0",
     "react-test-renderer": "^16.0.0",

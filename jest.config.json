@@ -1,5 +1,8 @@
 {
   "moduleFileExtensions": ["js", "jsx", "json"],
+  "moduleNameMapper": {
+    "\\.(css|less)$": "identity-obj-proxy"
+  },
   "setupFiles": ["<rootDir>/utils/before_test.js"],
   "modulePaths": [
     "<rootDir>/src",
