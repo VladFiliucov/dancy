@@ -8,6 +8,7 @@ import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 
 import { Button } from 'components/ui/Atoms/Button';
+import { testik } from 'components/ui/Atoms/Button.spec.js';
 
 addDecorator(withKnobs);
 
@@ -20,13 +21,7 @@ ButtonStories.addWithInfo('default',
       <Button />
     );
 
-    specs(() => describe('Button', () => {
-      it('Should have Submit text', () => {
-        const output = shallow(story);
-
-        expect(output.text()).toContain('Submit');
-      });
-    }));
+    specs(() => testik);
 
     return story;
   }
