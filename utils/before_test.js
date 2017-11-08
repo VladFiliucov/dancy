@@ -1,4 +1,5 @@
 var path = require('path');
+require('babel-polyfill');
 
 require('app-module-path').addPath(path.join(process.cwd(), 'src'));
 

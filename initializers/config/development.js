@@ -1,4 +1,4 @@
-const NODE_ENV = process.env.NODE_ENV || 'development'
+const NODE_ENV = process.env.NODE_ENV || 'development';
 
 import path, { resolve } from 'path';
 
@@ -7,7 +7,7 @@ const root = path.join(process.cwd(), 'src');
 export default {
   context: root,
 
-  entry: 'index.js',
+  entry: ['babel-polyfill', 'index.js'],
 
   output: {
     filename: 'bundle.js',
