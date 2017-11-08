@@ -8,7 +8,7 @@ import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 
 import { Button } from 'components/ui/Atoms/Button';
-import { testik } from 'components/ui/Atoms/Button.spec.js';
+import { tests } from 'components/ui/Atoms/Button.spec.js';
 
 addDecorator(withKnobs);
 
@@ -21,7 +21,7 @@ ButtonStories.addWithInfo('default',
       <Button />
     );
 
-    specs(() => testik);
+    specs(() => tests);
 
     return story;
   }
@@ -34,16 +34,24 @@ ButtonStories.addWithInfo('with other className',
       <Button text='Cmon!' className='warning' />
     );
 
-    specs(() => describe('Button', () => {
-      it('Should have `warning` className', () => {
-        const output = shallow(story);
-
-        expect(output.find('button.warning').exists()).toBe(true);
-      });
-    }));
+    specs(() => tests);
 
     return story;
   }
 );
+
+ButtonStories.addWithInfo('disabled',
+  'Button applies disabled httml attribute if disabled prop is set to true',
+  () => {
+    const story = (
+      <Button disabled={true} />
+    );
+
+    specs(() => tests);
+
+    return story;
+  }
+);
+
 
 export default ButtonStories;
