@@ -10,8 +10,9 @@
     "start": "webpack-dev-server --config ./initializers/config/webpack.es5.js",
     "test": "jest  --config jest.config.json",
     "start-dev": "node initializers/server/index.js",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "storybook": "start-storybook -p 6006 -s src/static/images",
+    "build-storybook": "build-storybook",
+    "mock-server": "json-server -p 3000 db.json"
   },
   "dependencies": {
     "app-module-path": "^2.2.0",
@@ -21,6 +22,7 @@
     "eslint-plugin-destructuring": "^2.1.0",
     "fs-extra": "3.0.1",
     "html-webpack-plugin": "2.29.0",
+    "json-server": "^0.12.1",
     "object-assign": "4.1.1",
     "path": "^0.12.7",
     "postcss-flexbugs-fixes": "3.2.0",
