@@ -1,11 +1,58 @@
+button {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  color: white;
+  border: none;
+}
+
 .primary {
   background: blue;
   color: white;
   border: 1px solid blue;
+  cursor: pointer;
+}
+
+.primary:active {
+  background: #66A3FF;
+  border: 5px solid white;
+}
+
+.success {
+  background: #426144;
+  color: white;
+  cursor: pointer;
+}
+
+.danger {
+  background: #D8452D;
+  color: white;
+  cursor: pointer;
 }
 
 .warning {
-  background: red;
+  background: #FCBA2C;
   color: white;
-  border: 1px solid red;
+  cursor: pointer;
+}
+
+.small {
+  padding: 10px 20px;
+  font-size: 10px;
+}
+
+.medium {
+  padding: 12px 30px;
+  font-size: 16px;
+}
+
+.big {
+  padding: 15px 32px;
+  font-size: 24px;
+}
+
+button:disabled {
+  background: #C3C2CF;
+  cursor: not-allowed;
+  border: none;
 }

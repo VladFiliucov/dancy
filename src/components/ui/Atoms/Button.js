@@ -16,7 +16,7 @@ Button.propTypes = {
 
 Button.defaultProps = {
   text: 'Submit',
-  className: 'primary',
+  className: 'primary medium',
   disabled: false,
   onSubmit: null
 };

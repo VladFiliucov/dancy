@@ -30,9 +30,13 @@ ButtonStories.addWithInfo('default',
 ButtonStories.addWithInfo('with other className',
   'Button applies classNames if they are provided in props',
   () => {
-    const story = (
-      <Button text='Cmon!' className='warning' />
-    );
+    const story = [
+      <Button text='Danger' className='danger small' />,
+      <hr />,
+      <Button text='Warning' className='warning medium' />,
+      <hr />,
+      <Button text='Success' className='success big' />
+    ];
 
     specs(() => tests);
 
