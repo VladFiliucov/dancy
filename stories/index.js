@@ -66,4 +66,16 @@ storiesOf('App', module)
     )
   );
 
+const Image = ({src}) => (
+  <img src={src} alt="Mountain View" />
+);
+
+storiesOf('Image', module)
+  .addWithInfo(
+    'Simple image',
+    'some blah blah', () => (
+      <Image src='shapeOfYou.jpg' />
+    )
+  );
+
 
