@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 const Image = (props) => <img {...props}/>;
 
 Image.defaultProps = {
-  alt: 'Alternative text',
-  src: 'shapeOfYou.jpg',
+  alt: 'Dancy Logo',
+  src: 'dancy-logo-big.png',
   width: '362',
   height: '272'
 };

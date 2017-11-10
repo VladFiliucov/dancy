@@ -67,4 +67,3 @@ storiesOf('App', module)
     )
   );
 
-
