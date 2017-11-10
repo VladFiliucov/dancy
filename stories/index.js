@@ -17,6 +17,7 @@ import App from 'startup/App';
 
 import NavbarStories from './components/ui/shared/Navbar';
 import ButtonStories from './components/ui/Atoms/Button';
+import ImageStories from './components/ui/Atoms/Image';
 
 configure({ adapter: new Adapter() });
 addDecorator(withKnobs);
@@ -63,18 +64,6 @@ storiesOf('App', module)
     'main heading',
     'Application main content', () => (
       <App />
-    )
-  );
-
-const Image = ({src}) => (
-  <img src={src} alt="Mountain View" />
-);
-
-storiesOf('Image', module)
-  .addWithInfo(
-    'Simple image',
-    'some blah blah', () => (
-      <Image src='shapeOfYou.jpg' />
     )
   );
 
