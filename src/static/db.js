@@ -8,6 +8,15 @@ export const teacher = {
   styles: 'Commercial'
 };
 
+export const noImgTeacher = {
+  id: 1,
+  firstName: 'Lyle',
+  lastName: 'Beniga',
+  avatar: undefined,
+  bio: 'Great Choreographer',
+  styles: 'Popping'
+};
+
 export const tutorials = [
   {
     teacher,
