@@ -6,10 +6,13 @@ import ProfileImage from 'components/ui/Atoms/ProfileImage.js';
 import './TeacherCard.css';
 
 const TeacherCard = ({teacher}) => {
-  const fullName = teacher && `${teacher.firstName} ${teacher.lastName}`;
+  if (!teacher)
+    return <p>This tutorial has no teacher attached to it</p>;
+
+  const fullName = `${teacher.firstName} ${teacher.lastName}`;
 
   return (
-    teacher && <div className="card">
+    <div className="card">
       <ProfileImage src={teacher.avatar} alt={fullName} />
       <div className="container">
         <h4><b>{fullName}</b></h4> 

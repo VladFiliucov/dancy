@@ -23,6 +23,15 @@ export const teacherCardSpecs = describe('TeacherCard', () => {
     expect(output.find('div.card').exists()).toBe(true);
   });
 
+  it('Should render Missing teacher message if no Teacher was passed in',
+    () => {
+      const output = shallow(<TeacherCard />);
+
+      expect(output.text())
+        .toContain('This tutorial has no teacher attached to it');
+    }
+  );
+
   it('Render Teachers Name correctly', () => {
     const output = shallow(<TeacherCard teacher={teacher} />);
 
