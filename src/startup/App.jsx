@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'components/ui/Atoms/Button';
 import Image from 'components/ui/Atoms/Image';
+import ProfileImage from 'components/ui/Atoms/ProfileImage';
 
 export default class App extends Component {
   constructor(props) {
@@ -19,6 +20,7 @@ export default class App extends Component {
         <div>
           <Button disabled={true} onClick={this.handleClick} />
           <Image />
+          <ProfileImage />
         </div>
       </div>
     );
