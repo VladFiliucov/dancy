@@ -2,6 +2,16 @@ import React, { Component } from 'react';
 import { Button } from 'components/ui/Atoms/Button';
 import Image from 'components/ui/Atoms/Image';
 import ProfileImage from 'components/ui/Atoms/ProfileImage';
+import TeacherCard from 'components/ui/Molecules/TeacherCard';
+
+const teacher = {
+  "id": 1,
+  "firstName": "Matt",
+  "lastName": "Steffanina",
+  "avatar": "mattStef.jpg",
+  "bio": "Matt Steffanina is a world-renowned hip hop dancer and choreographer from Los Angeles.",
+  "styles": "Commercial"
+};
 
 export default class App extends Component {
   constructor(props) {
@@ -20,7 +30,7 @@ export default class App extends Component {
         <div>
           <Button disabled={true} onClick={this.handleClick} />
           <Image />
-          <ProfileImage />
+          <TeacherCard teacher={teacher} />
         </div>
       </div>
     );
