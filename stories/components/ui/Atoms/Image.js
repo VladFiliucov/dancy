@@ -15,11 +15,39 @@ addDecorator(withKnobs);
 const ImageStories = storiesOf('Atoms/Image', module);
 
 ImageStories.addWithInfo('default',
-  'Image renders on the page',
+  'Handles situation when none of the props where provided',
   () => {
     const story = (
       <Image />
     );
+
+    specs(() => imageSpecs);
+
+    return story;
+  }
+);
+
+ImageStories.addWithInfo('with image',
+  'With props',
+  () => {
+    const story = (
+      <Image src='shapeOfYou.jpg' alt='Super Dance' />
+    );
+
+    specs(() => imageSpecs);
+
+    return story;
+  }
+);
+
+ImageStories.addWithInfo('with non existent image',
+  'With props',
+  () => {
+    const story = (
+      <Image src='does not exist' alt='Super Dance' />
+    );
+
+    specs(() => imageSpecs);
 
     return story;
   }

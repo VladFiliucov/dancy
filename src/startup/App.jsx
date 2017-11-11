@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'components/ui/Atoms/Button';
+import Image from 'components/ui/Atoms/Image';
 
 export default class App extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ export default class App extends Component {
         <h1>This is working now</h1>
         <div>
           <Button disabled={true} onClick={this.handleClick} />
+          <Image />
         </div>
       </div>
     );
