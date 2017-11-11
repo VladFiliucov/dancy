@@ -15,7 +15,10 @@ export default {
   },
 
   devServer: {
-    contentBase: path.join(root, 'assets'),
+    contentBase: [
+      path.join(root, 'assets'),
+      path.join(root, 'static', 'images')
+    ],
     publicPath: '/assets/',
     port: 9090
   },
