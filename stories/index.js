@@ -18,6 +18,7 @@ import App from 'startup/App';
 import NavbarStories from './components/ui/shared/Navbar';
 import ButtonStories from './components/ui/Atoms/Button';
 import ImageStories from './components/ui/Atoms/Image';
+import DescriptionStories from './components/ui/Atoms/Description';
 
 configure({ adapter: new Adapter() });
 addDecorator(withKnobs);
