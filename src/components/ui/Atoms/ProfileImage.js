@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './ProfileImage.css';
+import styles from './ProfileImage.css';
 
 const ProfileImage = ({src, alt}) => (
-  <img src={src} alt={alt} className='profile-image' />
+  <img src={src} alt={alt} className={styles.profileImage} />
 );
 
 ProfileImage.defaultProps = {
