@@ -1,20 +1,30 @@
-const genDefaultConfig = require('@storybook/react/dist/server/config/defaults/webpack.config.js');
+
 const path = require('path');
+const root = path.join(process.cwd(), 'src');
 
-module.exports = (baseConfig, env) => {
-  const config = genDefaultConfig(baseConfig, env);
-
-  // Extend it as you need.
-
-  config.resolve.modules.push(path.resolve(process.cwd(), 'src'));
-
-  config.module.rules.push({
+module.exports = (storybookBaseConfig, configType) => {
+  storybookBaseConfig.module.rules.push({
     test: /\.scss$/,
     loaders: ["style-loader", "css-loader", "sass-loader"],
     include: path.resolve(__dirname, '../')
   });
 
-  config.module.rules.push({
+  storybookBaseConfig.module.rules.push({
+    test: /\.css$/,
+    use: [
+      {
+        loader: 'style-loader',
+      },
+      {
+        loader: 'css-loader',
+        options: {
+          modules: true,
+        },
+      },
+    ],
+  });
+
+  storybookBaseConfig.module.rules.push({
     test: /\.(js|jsx)?$/,
     use: {
       loader: 'babel-loader'
@@ -22,5 +32,13 @@ module.exports = (baseConfig, env) => {
     exclude: /node_modules/
   });
 
-  return config;
+  storybookBaseConfig.resolve = {
+    extensions: ['.js', '.jsx'],
+    modules: [
+      'node_modules',
+      path.resolve(root)
+    ]
+  };
+
+  return storybookBaseConfig;
 };
