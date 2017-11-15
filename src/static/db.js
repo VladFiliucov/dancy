@@ -17,7 +17,7 @@ export const noImgTeacher = {
   styles: 'Popping'
 };
 
-const preview = {
+export const preview = {
   id: 1,
   tutorialId: 1,
   src: 'shapeOfYou.jpg',
