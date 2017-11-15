@@ -15,4 +15,21 @@ const PreviewCard = ({preview}) => (
   </div>
 );
 
+PreviewCard.propTypes = {
+  preview: PropTypes.shape({
+    id: PropTypes.number,
+    tutorialId: PropTypes.number,
+    src: PropTypes.string,
+    description: PropTypes.string,
+    url: PropTypes.string
+  })
+};
+
+PreviewCard.defaultProps = {
+  preview: {
+    src: Image.defaultProps.src,
+    description: Desc.defaultProps.text
+  }
+};
+
 export default PreviewCard;
