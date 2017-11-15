@@ -17,6 +17,30 @@ export const noImgTeacher = {
   styles: 'Popping'
 };
 
+const preview = {
+  id: 1,
+  tutorialId: 1,
+  src: 'shapeOfYou.jpg',
+  description: 'Song: SHAPE OF YOU - Ed Sheeran',
+  url: 'https://youtu.be/lq5oUOKh368'
+};
+
+export const tutorial = {
+  teacher: teacher,
+  preview: preview,
+  id: 1,
+  teacherId: 1,
+  title: 'Shape of you by Matt',
+  language: 'eng',
+  danceStyle: 'commercial',
+  difficulty: 'intermidiate',
+  mainVideo: {
+    id: 1,
+    tuotrialId: 1,
+    url: 'https://youtu.be/3DzkXeMFLpw'
+  }
+};
+
 export const tutorials = [
   {
     teacher,
