@@ -19,17 +19,16 @@ export const previewCardSpecs = describe('PreviewCard', () => {
   });
 
   describe('With valid preview object passed in', () => {
-    let output;
-
-    beforeEach(() => {
-      output = shallow(<PreviewCard preview={preview} />);
-    });
 
     it('Assigns Image props correctly', () => {
+      const output = shallow(<PreviewCard preview={preview} />);
+
       expect(output.find('Image').props().src).toBe('shapeOfYou.jpg');
     });
 
     it('Assigns Desc props correctly', () => {
+      const output = shallow(<PreviewCard preview={preview} />);
+
       expect(output.find('Desc').props().text)
         .toBe('Song: SHAPE OF YOU - Ed Sheeran');
     });
