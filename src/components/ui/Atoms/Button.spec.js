@@ -22,13 +22,5 @@ export const tests = describe('Button', () => {
 
     expect(output.find('button').prop('disabled')).toBe(true);
   });
-
-  it('Should have `danger` className', () => {
-    const output = shallow(
-      <Button text='Cmon!' className='danger' />
-    );
-
-    expect(output.find('button.danger').exists()).toBe(true);
-  });
 });
 

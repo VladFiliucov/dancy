@@ -31,6 +31,7 @@ export default class App extends Component {
           <Button disabled={true} onClick={this.handleClick} />
           <Image />
           <TeacherCard teacher={teacher} />
+          <Button className='danger big' />
         </div>
       </div>
     );
