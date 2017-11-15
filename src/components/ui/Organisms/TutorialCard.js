@@ -8,8 +8,12 @@ import Image from 'components/ui/Atoms/Image';
 
 const TutorialCard = ({tutorial}) => (
   <div className={styles.tutorialCard}>
-    <Image src={tutorial.preview.src} />
-    <TeacherCard teacher={tutorial.teacher} />
+    <div className={styles.grid}>
+      <Image src={tutorial.preview.src} />
+    </div>
+    <div className={styles.grid}>
+      <TeacherCard teacher={tutorial.teacher} />
+    </div>
   </div>
 );
 
