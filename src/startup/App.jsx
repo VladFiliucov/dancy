@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Button } from 'components/ui/Atoms/Button';
 import TutorialCard from 'components/ui/Organisms/TutorialCard';
+import PreviewCard from 'components/ui/Molecules/PreviewCard';
 
-import { tutorial } from 'static/db.js';
+import { tutorial, preview } from 'static/db.js';
 
 export default class App extends Component {
   constructor(props) {
@@ -12,10 +13,8 @@ export default class App extends Component {
   render() {
     return (
       <div>
-        <h1>This is working now</h1>
-        <div>
-          <TutorialCard tutorial={tutorial} />
-        </div>
+        <TutorialCard tutorial={tutorial} />
+        <PreviewCard preview={preview} />
       </div>
     );
   }

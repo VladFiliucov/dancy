@@ -20,6 +20,7 @@ import ButtonStories from './components/ui/Atoms/Button';
 import ImageStories from './components/ui/Atoms/Image';
 import ProfileImageStories from './components/ui/Atoms/ProfileImage';
 import DescriptionStories from './components/ui/Atoms/Description';
+import DescStories from './components/ui/Atoms/Desc';
 import TeacherCardStories from './components/ui/Molecules/TeacherCard';
 
 configure({ adapter: new Adapter() });

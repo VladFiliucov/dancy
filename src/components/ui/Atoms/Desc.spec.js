@@ -8,7 +8,9 @@ configure({ adapter: new Adapter() });
 
 import Desc from './Desc.js';
 
-export const tests = describe('Desc', () => {
+export const longString = '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890this is going to be replace by ...';
+
+export const descSpecs = describe('Desc', () => {
   it('Should have default prop with no description message', () => {
     const output = shallow(<Desc />);
 
@@ -26,8 +28,6 @@ export const tests = describe('Desc', () => {
   });
 
   it('Should wrap the text if it is longer then 150 symbols', () => {
-    const longString = '123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890this is going to be replace by ...';
-
     const output = shallow(
       <Desc text={longString} />
     );
