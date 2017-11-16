@@ -41,6 +41,22 @@ export const tutorial = {
   }
 };
 
+export const tutorialNoTeacher = {
+  teacher: noImgTeacher,
+  preview: preview,
+  id: 1,
+  teacherId: 1,
+  title: 'Shape of you by Matt',
+  language: 'eng',
+  danceStyle: 'commercial',
+  difficulty: 'intermidiate',
+  mainVideo: {
+    id: 1,
+    tuotrialId: 1,
+    url: 'https://youtu.be/3DzkXeMFLpw'
+  }
+};
+
 export const tutorials = [
   {
     teacher,
