@@ -12,15 +12,16 @@ import Adapter from 'enzyme-adapter-react-16';
 
 import expect from 'expect';
 
-import NavbarStories from './components/ui/shared/Navbar';
 import ButtonStories from './components/ui/Atoms/Button';
 import ImageStories from './components/ui/Atoms/Image';
 import ProfileImageStories from './components/ui/Atoms/ProfileImage';
+import NavbarStories from './components/ui/shared/Navbar';
 import DescriptionStories from './components/ui/Atoms/Description';
 import DescStories from './components/ui/Atoms/Desc';
 import TeacherCardStories from './components/ui/Molecules/TeacherCard';
 import PreviewCardStories from './components/ui/Molecules/PreviewCard';
 import TutorialCardStories from './components/ui/Organisms/TutorialCard';
+import TutorialList from './components/ui/Templates/TutorialList';
 
 configure({ adapter: new Adapter() });
 addDecorator(withKnobs);
