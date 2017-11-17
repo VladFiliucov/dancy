@@ -10,10 +10,6 @@ export default class App extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <TutorialList tutorials={tutorials} />
-      </div>
-    );
+    return (<TutorialList tutorials={tutorials} />);
   }
 }
