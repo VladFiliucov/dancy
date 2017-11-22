@@ -7,9 +7,6 @@ import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 import { specs, describe, it, beforeEach } from 'storybook-addon-specifications';
 
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-
 import ButtonStories from './components/ui/Atoms/Button';
 import ImageStories from './components/ui/Atoms/Image';
 import ProfileImageStories from './components/ui/Atoms/ProfileImage';
@@ -21,6 +18,5 @@ import PreviewCardStories from './components/ui/Molecules/PreviewCard';
 import TutorialCardStories from './components/ui/Organisms/TutorialCard';
 import TutorialList from './components/ui/Templates/TutorialList';
 
-configure({ adapter: new Adapter() });
 addDecorator(withKnobs);
 
