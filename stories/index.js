@@ -7,10 +7,8 @@ import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 import { specs, describe, it, beforeEach } from 'storybook-addon-specifications';
 
-import { mount, configure } from 'enzyme';
+import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
-
-import expect from 'expect';
 
 import ButtonStories from './components/ui/Atoms/Button';
 import ImageStories from './components/ui/Atoms/Image';
