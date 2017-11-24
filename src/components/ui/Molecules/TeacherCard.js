@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ProfileImage from 'components/ui/Atoms/ProfileImage.js';
+import ProfileImage from 'components/ui/Atoms/ProfileImage';
 
 import './TeacherCard.css';
 

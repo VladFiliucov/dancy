@@ -8,7 +8,7 @@ import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 
 import ProfileImage from 'components/ui/Atoms/ProfileImage';
-import { profileImageSpecs } from 'components/ui/Atoms/ProfileImage.spec.js';
+import { profileImageSpecs } from 'components/ui/Atoms/ProfileImage/ProfileImage.spec.js';
 
 addDecorator(withKnobs);
 
