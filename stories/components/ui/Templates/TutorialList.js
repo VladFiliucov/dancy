@@ -8,7 +8,7 @@ import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 
 import TutorialList from 'components/ui/Templates/TutorialList';
-import { tutorialListSpecs } from 'components/ui/Templates/TutorialList.spec.js';
+import { tutorialListSpecs } from 'components/ui/Templates/TutorialList/TutorialList.spec.js';
 
 import { tutorials } from 'static/db.js';
 

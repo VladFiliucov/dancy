@@ -1,7 +1,7 @@
 import React from 'react';
 import expect from 'expect';
 import { shallow, configure, mount } from 'enzyme';
-import raf from 'utils/tempPolyfills';
+import 'utils/tempPolyfills';
 import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
