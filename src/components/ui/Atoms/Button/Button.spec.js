@@ -6,7 +6,7 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 
-import { Button } from './Button.js';
+import Button from './Button.js';
 
 export const tests = describe('Button', () => {
   it('Should have Submit text if no `text` prop was provided', () => {

@@ -10,11 +10,15 @@ const genClasses = (classModule, string) => {
   return arr.join(' ');
 };
 
-export const Button = ({text, ...rest}) => (
+const Button = ({text, ...rest}) => (
   <button
     {...rest}
     className={genClasses(styles, rest.className)}
-  >{text}</button>
+  >
+    {
+      text
+    }
+  </button>
 );
 
 Button.propTypes = {
@@ -30,4 +34,6 @@ Button.defaultProps = {
   disabled: false,
   onSubmit: null
 };
+
+export default Button;
 

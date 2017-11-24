@@ -7,8 +7,8 @@ import expect from 'expect';
 import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 
-import { Button } from 'components/ui/Atoms/Button';
-import { tests } from 'components/ui/Atoms/Button.spec.js';
+import Button from 'components/ui/Atoms/Button';
+import { tests } from 'components/ui/Atoms/Button/Button.spec.js';
 
 addDecorator(withKnobs);
 
