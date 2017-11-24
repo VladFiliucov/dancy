@@ -8,7 +8,7 @@ import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 
 import Image from 'components/ui/Atoms/Image';
-import { imageSpecs } from 'components/ui/Atoms/Image.spec.js';
+import { imageSpecs } from 'components/ui/Atoms/Image/Image.spec.js';
 
 addDecorator(withKnobs);
 
