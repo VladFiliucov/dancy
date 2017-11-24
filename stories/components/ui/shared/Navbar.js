@@ -8,6 +8,7 @@ import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 
 import Navbar from 'components/ui/Molecules/Navbar';
+import { navbarSpecs } from 'components/ui/Molecules/Navbar/Navbar.spec.js';
 
 addDecorator(withKnobs);
 

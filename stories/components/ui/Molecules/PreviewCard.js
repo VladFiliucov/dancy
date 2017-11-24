@@ -8,7 +8,7 @@ import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 
 import PreviewCard from 'components/ui/Molecules/PreviewCard';
-import { previewCardSpecs } from 'components/ui/Molecules/PreviewCard.spec.js';
+import { previewCardSpecs } from 'components/ui/Molecules/PreviewCard/PreviewCard.spec.js';
 
 import { preview } from 'static/db.js';
 

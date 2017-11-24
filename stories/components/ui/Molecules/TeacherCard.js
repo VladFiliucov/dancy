@@ -8,7 +8,7 @@ import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 
 import TeacherCard from 'components/ui/Molecules/TeacherCard';
-import { teacherCardSpecs } from 'components/ui/Molecules/TeacherCard.spec.js';
+import { teacherCardSpecs } from 'components/ui/Molecules/TeacherCard/TeacherCard.spec.js';
 import { teacher, noImgTeacher } from 'static/db.js';
 
 addDecorator(withKnobs);
