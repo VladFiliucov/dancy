@@ -8,7 +8,7 @@ import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 
 import Description from 'components/ui/Atoms/Description';
-import { descriptionSpecs } from 'components/ui/Atoms/Description.spec.js';
+import { descriptionSpecs } from 'components/ui/Atoms/Description/Description.spec.js';
 
 addDecorator(withKnobs);
 
