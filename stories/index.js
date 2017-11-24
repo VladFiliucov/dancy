@@ -1,13 +1,22 @@
 import React from 'react';
 
-import { storiesOf } from '@storybook/react';
+import { storiesOf, addDecorator } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
+import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
+import { withInfo } from '@storybook/addon-info';
+import { specs, describe, it, beforeEach } from 'storybook-addon-specifications';
 
-import { Button, Welcome } from '@storybook/react/demo';
+import ButtonStories from './components/ui/Atoms/Button';
+import ImageStories from './components/ui/Atoms/Image';
+import ProfileImageStories from './components/ui/Atoms/ProfileImage';
+import DescriptionStories from './components/ui/Atoms/Description';
+import DescStories from './components/ui/Atoms/Desc';
+import NavbarStories from './components/ui/Molecules/Navbar';
+import TeacherCardStories from './components/ui/Molecules/TeacherCard';
+import PreviewCardStories from './components/ui/Molecules/PreviewCard';
+import TutorialCardStories from './components/ui/Organisms/TutorialCard';
+import TutorialList from './components/ui/Templates/TutorialList';
 
-storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
+addDecorator(withKnobs);
 
-storiesOf('Button', module)
-  .add('with text', () => <Button onClick={action('clicked')}>Hello Button</Button>)
-  .add('with some emoji', () => <Button onClick={action('clicked')}>😀 😎 👍 💯</Button>);
