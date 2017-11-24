@@ -8,7 +8,7 @@ import { withKnobs, text, color, boolean } from '@storybook/addon-knobs';
 import { withInfo } from '@storybook/addon-info';
 
 import TutorialCard from 'components/ui/Organisms/TutorialCard';
-import { tutorialCardSpecs } from 'components/ui/Organisms/TutorialCard.spec.js';
+import { tutorialCardSpecs } from 'components/ui/Organisms/TutorialCard/TutorialCard.spec.js';
 
 import { tutorial, tutorialNoTeacher } from 'static/db.js';
 
