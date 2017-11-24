@@ -10,9 +10,9 @@ import { specs, describe, it, beforeEach } from 'storybook-addon-specifications'
 import ButtonStories from './components/ui/Atoms/Button';
 import ImageStories from './components/ui/Atoms/Image';
 import ProfileImageStories from './components/ui/Atoms/ProfileImage';
-import NavbarStories from './components/ui/shared/Navbar';
 import DescriptionStories from './components/ui/Atoms/Description';
 import DescStories from './components/ui/Atoms/Desc';
+import NavbarStories from './components/ui/Molecules/Navbar';
 import TeacherCardStories from './components/ui/Molecules/TeacherCard';
 import PreviewCardStories from './components/ui/Molecules/PreviewCard';
 import TutorialCardStories from './components/ui/Organisms/TutorialCard';
