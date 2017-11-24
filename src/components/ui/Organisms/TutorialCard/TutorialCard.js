@@ -5,7 +5,6 @@ import styles from './TutorialCard.css';
 
 import PreviewCard from 'components/ui/Molecules/PreviewCard';
 import TeacherCard from 'components/ui/Molecules/TeacherCard';
-import Image from 'components/ui/Atoms/Image';
 
 const TutorialCard = ({tutorial}) => {
   if (!tutorial) return 'This tutorial is not available';

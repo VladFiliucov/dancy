@@ -81,6 +81,9 @@ module.exports = {
           "node_modules",
           "src/*"
         ]
+      },
+      "webpack": {
+        "config": "./initializers/config/webpack.es5.js"
       }
     }
   }
