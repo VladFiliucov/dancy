@@ -14,5 +14,11 @@ export const navbarSpecs = describe('Navbar', () => {
 
     expect(output.text()).toContain('Dancy');
   });
+
+  it('Applies provided title', () => {
+    const output = shallow(<Navbar title='Brave new website' />);
+
+    expect(output.text()).toContain('Brave new website');
+  });
 });
 
