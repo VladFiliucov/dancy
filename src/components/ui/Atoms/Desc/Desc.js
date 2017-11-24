@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Desc.css'
-import normalize from 'utils/normalize'
+import styles from './Desc.css';
+import normalize from 'utils/normalize';
 
 const Desc = ({text}) => <div className={styles.desc}>{normalize(text)}</div>;
 

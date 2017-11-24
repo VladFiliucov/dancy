@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
-import { Button } from 'components/ui/Atoms/Button';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 import TutorialList from 'components/ui/Templates/TutorialList';
 
-import { tutorials } from 'static/db.js';
+const App = ({tutorials}) => (
+  <TutorialList tutorials={tutorials} />
+);
 
-export default class App extends Component {
-  constructor(props) {
-    super(props);
-  }
+App.propTypes = {
+  tutorials: PropTypes.object
+};
 
-  render() {
-    return (<TutorialList tutorials={tutorials} />);
-  }
-}
+export default App;
+
