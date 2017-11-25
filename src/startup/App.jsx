@@ -8,7 +8,7 @@ const App = ({tutorials}) => (
 );
 
 App.propTypes = {
-  tutorials: PropTypes.object
+  tutorials: PropTypes.array
 };
 
 export default App;
