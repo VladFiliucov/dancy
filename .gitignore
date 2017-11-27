@@ -2,3 +2,5 @@ node_modules/
 .DS_Store
 .ignore
 *.log
+bundle.js
+vendor.js
