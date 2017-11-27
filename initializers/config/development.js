@@ -2,15 +2,19 @@ const NODE_ENV = process.env.NODE_ENV || 'development';
 const merge = require('webpack-merge');
 const baseConfig = require('./base.js');
 
+import webpack from 'webpack';
+
 import path, { resolve } from 'path';
 
 const root = path.join(process.cwd(), 'src');
 
 const config =  {
-  entry: ['babel-polyfill', 'index.js'],
+  entry: {
+    bundle: ['babel-polyfill', 'index.js'],
+  },
 
   output: {
-    filename: 'bundle.js',
+    filename: '[name].js',
     publicPath: '/assets/'
   },
 
@@ -21,7 +25,16 @@ const config =  {
     ],
     publicPath: '/assets/',
     port: 9090
-  }
+  },
+
+  plugins: [
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      minChunks: (module) => (
+        module.context && module.context.indexOf('node_modules') !== -1
+      )
+    })
+  ]
 };
 
 export default merge(baseConfig, config);
