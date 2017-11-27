@@ -14,7 +14,7 @@ const express = require('express');
 
 const application = express();
 
-application.use(express.static('src/static'));
+application.use(express.static('src/static/images'));
 application.set('views', __dirname);
 application.set('view engine', 'ejs');
 
@@ -22,7 +22,7 @@ if (__DEVELOPMENT__) {
   const webpack = require('webpack');
   const webpackDev = require('webpack-dev-middleware');
   const webpackHot = require('webpack-hot-middleware');
-  const config = require('../webpack/development.js').default;
+  const config = require('../config/development.js').default;
   const compiler = webpack(config);
 
   application.use(
