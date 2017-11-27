@@ -9,7 +9,7 @@ const root = path.join(process.cwd(), 'src');
 
 const config =  {
   entry: {
-    bundle: ['webpack-hot-middleware/client', 'babel-polyfill', 'index.js'],
+    bundle: ['react-hot-loader/patch', 'webpack-hot-middleware/client', 'babel-polyfill', 'index.js'],
   },
 
   output: {
@@ -37,7 +37,8 @@ const config =  {
       minChunks: (module) => (
         module.context && module.context.indexOf('node_modules') !== -1
       )
-    })
+    }),
+    new webpack.HotModuleReplacementPlugin()
   ]
 };
 
