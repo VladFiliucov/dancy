@@ -13,6 +13,7 @@
     "storybook": "start-storybook -p 6006 -s src/static/images",
     "build-storybook": "build-storybook",
     "build": "webpack --config initializers/config/webpack.es5.js",
+    "build-prod": "webpack --config initializers/config/start.prod.js",
     "mock-server": "json-server -p 3000 db.json"
   },
   "dependencies": {
