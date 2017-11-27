@@ -3,14 +3,13 @@ const merge = require('webpack-merge');
 const baseConfig = require('./base.js');
 
 import webpack from 'webpack';
-
 import path, { resolve } from 'path';
 
 const root = path.join(process.cwd(), 'src');
 
 const config =  {
   entry: {
-    bundle: ['babel-polyfill', 'index.js'],
+    bundle: ['webpack-hot-middleware/client', 'babel-polyfill', 'index.js'],
   },
 
   output: {
@@ -28,6 +27,11 @@ const config =  {
   },
 
   plugins: [
+    new webpack.DefinePlugin({
+      __SERVER__: false,
+      __CLIENT__: true,
+      __DEVELOPMENT__: true
+    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: (module) => (
