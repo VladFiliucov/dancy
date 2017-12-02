@@ -5,11 +5,12 @@ const baseConfig = require('./base.js');
 import webpack from 'webpack';
 import path, { resolve } from 'path';
 
+import UglifyJSPlugin from 'uglifyjs-webpack-plugin';
 const root = path.join(process.cwd(), 'src');
 
 const config =  {
   entry: {
-    bundle: ['react-hot-loader/patch', 'webpack-hot-middleware/client', 'babel-polyfill', 'index.js'],
+    bundle: ['babel-polyfill', 'index.js'],
   },
 
   output: {
@@ -27,20 +28,14 @@ const config =  {
   },
 
   plugins: [
-    new webpack.DefinePlugin({
-      __SERVER__: false,
-      __CLIENT__: true,
-      __DEVELOPMENT__: true
-    }),
     new webpack.optimize.CommonsChunkPlugin({
       name: 'vendor',
       minChunks: (module) => (
         module.context && module.context.indexOf('node_modules') !== -1
       )
     }),
-    new webpack.HotModuleReplacementPlugin()
+    new UglifyJSPlugin()
   ]
 };
 
 export default merge(baseConfig, config);
-

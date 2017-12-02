@@ -83,7 +83,7 @@ module.exports = {
         ]
       },
       "webpack": {
-        "config": "./initializers/config/webpack.es5.js"
+        "config": "./initializers/config/start.dev.js"
       }
     }
   }
